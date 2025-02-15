@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            background: url('rose-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background: green;
+            color: white;
+        }
+        .no {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Would you be my Valentine?</h1>
+        <button class="btn yes" onclick="yesClicked()">Yes</button>
+        <button class="btn no" onclick="noClicked()">No</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function yesClicked() {
+            document.getElementById("response").innerHTML = "I would love you forever ❤";
+        }
+
+        function noClicked() {
+            document.getElementById("response").innerHTML = "I will wait for you until February 14, 2035... 💔";
+        }
+    </script>
+
+</body>
+</html>
